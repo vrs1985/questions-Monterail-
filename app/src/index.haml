@@ -1,0 +1,116 @@
+!!! 5
+%head{lang: "en"}
+  %meta{charset: "utf-8"}
+  %title Questions
+  %meta{content:"", name: "description"}
+  %meta{content: "", name: "author"}
+  %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
+  %link{rel: "stylesheet", href: "fonts/glyphicons-halflings-regular.svg"}
+  %link{rel: "stylesheet", href: "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"}
+  %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i"}
+  %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Merriweather:400i"}
+  %link{rel: "stylesheet", href: "css/main.css"}
+  %script{src: "js/main.js"}
+%body
+  .wrapper
+    %section.header
+      .row
+        .col-lg-1
+          .ion-ios-arrow-left.slideLeft
+        .col-lg-offset-1.col-lg-8
+          .col-lg-9
+            %span.heading-1.uppercase.questhead questions
+            .plus
+              %span.ion-android-add
+            %strong.pull-right.header-switcher
+              %label
+                %input{type: "radio", name: "all-my-tumblr", checked: "checked", value: "1"}
+                My shelf
+              %label
+                %input{type: "radio", name: "all-my-tumblr", value: "2"}
+                All questions
+          .col-lg-3
+            %i.pull-right.header-switcher
+              %span.sortBy
+                %strong Sort by:
+                %label.sortByLabel{for: "sortBy"}
+                  recent
+                    %input{type: "radio", name: "sortBy", value: "recent"}
+                or
+                %label.sortByLabel{for: "sortBy"}
+                  hot
+                    %input{type: "radio", name: "sortBy", value: "hot"}
+          .row.search-quest
+            .col-lg-offset-2.col-lg-8
+              .col-lg-9
+                %input.inpt-search-quest{type: "text", placeholder: "Search questions"}
+              .col-lg-3
+                %input.uppercase.btn.btn-default.btn-search-quest{type: "submit", value: "search"}
+        %section.questions
+          .row
+            .col-lg-offset-2.col-lg-8
+            -# begin section questions
+              .question
+                .row
+                  .col-lg-9.question-header
+                    %row
+                      .col-lg-2
+                        %figure
+                          %img.question-user-pic{src: "https://randomuser.me/api/portraits/women/75.jpg", alt: "logo"}
+                      .col-lg-10
+                        %span.question-user-name
+                          Eva
+                          %span.question-ask
+                            is asking:
+                        %span.heading4.question-subject
+                          Will insulin make my patient gain weight?
+                  .col-lg-3
+                .row.question-body
+                  .col-lg-9
+                    .row
+                      .col-lg-2.question-asked
+                        %hr
+                        asked
+                      .col-lg-10
+                        .question-contributors
+                          -# begin counter contributor section
+                          %figure.question-figure
+                            %span.question-cont-pic
+                              %strong 3
+                            %span.question-contr-count-activ
+                              more activities
+                            %span.question-contr-round
+                          -# end counter contributor section
+                            -#  begin one contributor section
+                          %figure.question-figure
+                            %span.question-cont-pic
+                              %img{src: "https://randomuser.me/api/portraits/men/80.jpg", alt: "user-pic"}
+                            %span.question-contr-activ
+                            %span.question-contr-round
+                            -#  end one contributor section
+                          %figure.question-figure.ans
+                            %span.question-cont-pic
+                              %img{src: "https://randomuser.me/api/portraits/men/59.jpg", alt: "user-pic"}
+                            %span.question-contr-activ
+                            %span.question-contr-round
+                          %figure.question-figure
+                          %figure.question-figure
+                  .col-lg-3
+                    .question-additional
+                      .question-disqus
+                        1 related discussion
+                      .question-involved
+                        6 peers involved
+                      .question-convers
+                        3 conversations
+                -# end section questions
+              .row
+                .col-lg-12
+                  %a#load-more-quest{href: "#"} load more questions
+
+
+
+
+
+
+

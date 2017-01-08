@@ -1,0 +1,486 @@
+
+// BEGIN STYLE FOR HEADER
+.wrapper
+  margin: 0 auto
+  display: block
+  width: 94%
+  min-height: 100vh
+.uppercase
+  text-transform: uppercase
+.header
+  padding-top: 45px
+  padding-bottom: 20px
+.slideLeft
+  font-size: 2.6em
+  display: block
+  margin: 0 27%
+
+  border: 1px solid $gray-base
+  border-radius:  50%
+  width: 40px
+  height: 40px
+  text-align: center
+  line-height: 1
+  cursor: pointer
+.questhead
+  font-family: "Cuprum", sans-serif
+  font-weight: 800
+  letter-spacing: 1px
+.plus
+  font-size: 1.8em
+  font-weight: 800
+  margin-left: 23px
+  display: inline-block
+  border-radius:  50%
+  height: 26px
+  width: 26px
+  color: $body-bg
+  cursor: pointer
+  text-align: center
+  line-height: 0
+  background-color: $brand-primary
+
+// styles for header radiobutton
+.header-switcher
+  margin-top: 1.5em
+input[name="all-my-tumblr"]
+  margin-right: 1em
+input[name="all-my-tumblr"]:nth-child(2)
+  margin-left: 1em
+// styles for header radiobutton
+input[name="sortBy"]
+  display: none
+.sortByLabel
+  margin: 0 5px
+  color: $brand-primary
+  cursor: pointer
+  // style for header searching section
+.search-quest
+  margin-top: 20px
+// style for header searching section
+
+// style for question
+.questions
+  background-color: lighten($gray-base, 96%)
+  min-width: 100%
+.question
+  display: block
+  height: 340px
+  background-color:  $body-bg
+  box-shadow: 2px -2px 2px $gray-midlight
+.question-header
+  height: 100px
+  background-color:   lighten($brand-primary, 46%)
+figure
+  margin:  1.5em 25px
+  vertical-align: middle
+  text-align: center
+.question-user-pic
+  display: block
+  width: 50px
+  height: 50px
+  border-radius:  50%
+.question-user-name
+  margin-top:   1.2em
+  margin-left:  0.8em
+  display: inline-block
+  color: $brand-primary
+  font-weight: 600
+.question-subject
+  margin-top:   0.2em
+  margin-left:  0.6em
+  display: block
+  font-family: $font-family-merriweather
+  color: $brand-primary
+  font-style: italic
+.question-ask
+  font-size: $font-size-small
+  font-weight: 400
+  color: $gray
+  text-transform: uppercase
+.question-body
+  height: 250px
+.question-asked
+  box-sizing: border-box
+  font-size:  $font-size-small
+  padding: 160px 15px 7px
+  background-color:   lighten($brand-primary, 46%)
+  text-transform: uppercase
+  text-align: center
+.question-figure
+  width: 100%
+  height: 100%
+  background-color: lighten($gray-base, 96%)
+.question-contributors
+  display: flex
+  justify-content: center
+  width: 100%
+  margin-top: 25px
+.question-figure
+  margin: 5px
+  width: 20%
+  height: 165px
+  text-align: center
+.question-contr-count-activ
+  font-style: italic
+  margin-bottom: 5px
+  display: inline-block
+.question-contr-activ
+  margin-top: 14px
+  padding-top: 10px
+  display: inline-block
+  border-top: 1px solid $gray-dark
+  font-size:  $font-size-small
+  text-transform: uppercase
+  &:after
+    content: "commented"
+.question-cont-pic
+  display: block
+  height: 120px
+  line-height: 6.5
+  img
+    margin: 25px auto
+    width: 55px
+    height: 55px
+    border-radius:  50%
+.question-contr-round
+  margin: auto
+  display: block
+  position: relative
+  width: 10px
+  height: 10px
+  border-radius:  50%
+  background-color: $gray-light
+.question-additional
+  display: flex
+  flex-direction: column
+  width: 100%
+.question-disqus,
+.question-involved,
+.question-convers
+  margin-top: 17%
+  display: block
+  font-size:  $font-size-small
+  font-style: italic
+  font-weight: 600
+  width: 100%
+  height: 30px
+  text-align: center
+.ans
+  .question-contr-activ:after
+    content: "answered"
+  .question-contr-round
+    background-color: $gray-darker
+// style for question
+#load-more-quest
+  margin: 20px
+  color: $brand-danger
+  font-style: italic
+  font-weight: 600
+  line-height: 4
+
+// END STYLE FOR CONNTENT
+// START STYLE FOR SINGLE QUESTION PAGE
+
+.my-question
+  min-height: 200px
+  background-color:  lighten($brand-primary, 46%)
+  box-shadow: 2px -2px 2px $gray-midlight
+.question-header-follow
+  box-sizing:  border-box
+  font-family:  $font-family-merriweather
+  font-style: italic
+  padding-top: 2.5em
+  height: 100px
+  color:  $brand-primary
+  text-align: center
+
+.my-question-body
+  display: flex
+  align-items: stretch
+  min-height: 150px
+.my-question-contributors
+  margin-left: 100px
+  width: 80%
+  padding: 3em 1em 3em 2em
+  background-color:  $body-bg
+.my-question-additional
+  display: flex
+  width: 25%
+  justify-content: center
+  align-items: center
+  background-color: $body-bg
+.count-votes
+  font-style: italic
+.votes
+  font-family: "Ionicons"
+  font-size:  $font-size-h1
+  color: $brand-primary
+  display: inline-block
+  position: absolute
+  cursor: pointer
+.up
+  margin: -20px  55px
+  &:after
+    content: "\f10d"
+.down
+  margin: 20px  55px
+  &:after
+    content: "\f104"
+.give-question
+  display: block
+  position: absolute
+  margin: -15px calc(50% - 100px)
+  z-index: 9
+input[name="giveAnsw"]
+  font-weight: 600
+  border-radius:  0
+  width: 200px
+  z-index: 9
+//  start comment on page one question
+.my-question-comments
+  display: block
+  font-size:  $font-size-base
+  padding-bottom: 5em
+  ul
+    padding: 0 !important
+.my-question-shad
+  margin-bottom: 6em
+  box-shadow: 2px -2px 2px $gray-midlight
+.my-quest-comment-answ
+  display: flex
+  font-size: $font-size-base
+  background-color:  $body-bg
+  & img
+    @extend .question-user-pic
+    padding: 1.5em
+.my-quest-com-answ-body
+  padding: 1em
+  width: 90%
+  border-left: 1px solid
+  border-color:   $gray-light
+.my-quest-com-answ-name
+  display: inline-block
+  color:  $brand-primary
+  font-size: $font-size-h4
+  font-weight: 600
+.my-quest-com-answ-it
+  color:  $gray-light
+.my-quest-com-answ-time
+  font:
+    family: $font-family-merriweather
+    size: $font-size-h4
+    style: italic
+.my-quest-com-answ-text
+  display: block
+  padding: 1em
+// for involves
+.my-question-answ-diqus
+  display: flex
+  margin-left: 93px
+  font-size: $font-size-base
+  background-color:  $body-bg
+  ul &
+    padding-right: 0
+  & img
+    @extend .question-user-pic
+    padding: 1.5em
+  .my-question-additional
+    width: 30%
+
+//  end comment on page one question
+
+// pop up profile window
+
+.pr-popup
+  width: 100%
+  height: 100%
+  background-color:  rgba(0,0,0,0.5)
+  overflow: auto
+  overflow-y:  scroll
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1050
+  .pr-popup-content
+    margin: 40px auto 0 auto
+    width: 80%
+    background-color: $body-bg
+.pr-close-popup
+  padding: 10px
+.pr-cross
+  cursor: pointer
+  color: $gray-light
+.pr-wrapper
+  @extend .center-block
+  width: 80%
+.pr-user-pic
+  width: 90px
+  height: 90px
+  border-radius:  50%
+.pr-user-name
+  @extend .question-user-name
+  font-size: $font-size-h4
+  display: block
+  text-align: center
+.pr-grey-big-txt
+  @extend .uppercase
+  font-family: $font-family-cuprum
+  font-size: $font-size-h4
+  font-weight: 700
+  margin: 1.5em 0
+  display: inline-block
+  color: $gray-light
+.pr-activity-medal
+  display: inline-block
+  font-size:  $font-size-h4
+.center-txt
+  text-align: center
+  font-weight: 700
+.right-txt
+  text-align: right
+  font-weight: 700
+.left-txt
+  text-align: left
+  font-weight: 700
+  // medal for activity (profile pop up)
+.fa
+  vertical-align: middle
+.pr-activity
+  display: inline-flex
+.pr-activity-medal
+  font-size: $font-size-h6
+  margin-left: 5px
+  text-align: center
+.pr-activity-medal-round
+  width: 17px
+  height: 17px
+  text-align: center
+  border-radius: 50%
+  color:  $body-bg
+  background-color:  $gray-midlight
+.pr-activity-medal-bookmark
+  margin-top: -3px
+  color:  $gray-midlight
+.pr-active-text
+  color: $brand-danger
+.pr-active-round
+  background-color:  $brand-danger
+.pr-howitall
+  font-family: $font-family-merriweather
+  font-size: $font-size-h1
+  font-style: italic
+  font-weight: 600
+.pr-lr-arrows
+  @extend .plus
+  margin: 0
+  margin-top: 13px
+.pr-mix-sentence
+  @extend .uppercase
+  @extend .center-txt
+  @extend .pr-grey-big-txt
+  margin: 4em 0
+.blue-squares
+  display: flex
+  justify-content: center
+.blue-square-one
+  margin: 15px
+  padding: 15px
+  width: 100px
+  height: 100px
+  background-color: $brand-info
+.pr-blue-square-digit
+  margin: 20px auto
+  display: block
+  text-align: center
+  font-size:  $font-size-h2
+  font-weight: 600
+.pr-blue-square-text
+  display: block
+  font-family: $font-family-merriweather
+  text-align: center
+.blue-square-one:nth-child(1)
+  transform: rotate(40deg)
+  .blue-square-content
+    transform: rotate(-40deg)
+.blue-square-one:nth-child(2)
+  transform: rotate(10deg)
+  .blue-square-content
+    transform: rotate(-10deg)
+.blue-square-one:nth-child(3)
+  transform: rotate(31deg)
+  .blue-square-content
+    transform: rotate(-31deg)
+.blue-square-one:nth-child(4)
+  transform: rotate(-20deg)
+  .blue-square-content
+    transform: rotate(20deg)
+.pr-joined
+  @extend .blue-squares
+.pr-sqare-joined-one
+  width: 100px
+  margin: 0 15px
+  text-align: center
+.pr-joined-user-pic
+  display: table
+  width: 100px
+  height: 100px
+  background: repeating-linear-gradient(45deg, $body-bg, $body-bg 4px, $gray-lighter 4px, $gray-lighter 6px)
+.pr-joined-user-logo
+  @extend .question-user-pic
+  margin: 15px
+  width: 70px
+  height: 70px
+.pr-joined-user-name
+  @extend .question-user-name
+  margin: 15px auto 0
+.pr-footer
+  margin-bottom: 30px
+  display: block
+  height: 220px
+  text-align: center
+  background: repeating-linear-gradient(45deg, $body-bg, $body-bg 4px, $gray-lighter 4px, $gray-lighter 6px)
+.pr-footer-picture
+  @extend .question-user-pic
+  position: relative
+  top: -35px
+  left: calc(50% - 35px)
+  width: 70px
+  height: 70px
+  background: none
+.pr-footer-user-name
+  @extend .pr-joined-user-name
+.pr-footer-grey-text
+  @extend .pr-grey-big-txt
+  font-size: $font-size-h5
+.pr-footer-user-name,
+.pr-footer-grey-text
+  margin: 0
+.pr-footer-topic
+  font:
+    family:  $font-family-merriweather
+    size: $font-size-h4
+    weight: 600
+    style: italic
+  margin-top: 0.5em
+  display: block
+  color: $brand-primary
+  word-spacing: 0.2em
+  letter-spacing: 1px
+.pr-footer-summary
+  margin: 3em auto
+  font-weight: 600
+  text-align: center
+.pr-footer-summary-digit
+  display: inline-block
+  font-size:  $font-size-h4
+.pr-footer-summary-text
+  display: inline-block
+  font:
+    family:  $font-family-merriweather
+    style: italic
+// pop up profile window
+
+// END STYLE FOR SINGLE QUESTION PAGE

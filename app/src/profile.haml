@@ -1,0 +1,167 @@
+!!! 5
+%head{lang: "en"}
+  %meta{charset: "utf-8"}
+  %title Questions
+  %meta{content:"", name: "description"}
+  %meta{content: "", name: "author"}
+  %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
+  %link{rel: "stylesheet", href: "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"}
+  %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i"}
+  %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Merriweather:400i"}
+  %link{rel: "stylesheet", href: "css/main.css"}
+  %script{src: "js/main.js"}
+%body
+  .wrapper
+    %section.header
+      .row
+        .col-lg-1
+          .ion-ios-arrow-left.slideLeft
+        .col-lg-offset-1.col-lg-8
+          .col-lg-9
+            %span.heading-1.uppercase.questhead questions
+            .plus
+              %span.ion-android-add
+            %strong.pull-right.header-switcher
+              %label
+                %input{type: "radio", name: "all-my-tumblr", checked: "checked", value: "1"}
+                My shelf
+              %label
+                %input{type: "radio", name: "all-my-tumblr", value: "2"}
+                All questions
+          .col-lg-3
+            %i.pull-right.header-switcher
+              %span.sortBy
+                %strong Sort by:
+                %label.sortByLabel{for: "sortBy"}
+                  recent
+                    %input{type: "radio", name: "sortBy", value: "recent"}
+                or
+                %label.sortByLabel{for: "sortBy"}
+                  hot
+                    %input{type: "radio", name: "sortBy", value: "hot"}
+          .row.search-quest
+            .col-lg-offset-2.col-lg-8
+              .col-lg-9
+                %input.inpt-search-quest{type: "text", placeholder: "Search questions"}
+              .col-lg-3
+                %input.uppercase.btn.btn-default.btn-search-quest{type: "submit", value: "search"}
+  -# begin profile pop up window
+  .pr-popup
+    .pr-popup-content
+      .row.pr-close-popup
+        .col-lg-12
+          %span.pull-right.ion-close-round.pr-cross
+      .pr-wrapper
+        .row
+          .col-lg-12
+            %img.center-block.pr-user-pic{src: "img/user-pic/f4.jpg", alt: "logo"}
+        .row
+          .col-lg-12
+            %span.pr-user-name Nicole
+        .row
+          .col-lg-4.left-txt
+            %span.pr-grey-big-txt member for
+            %span
+              5 months
+          .col-lg-4.center-txt
+            %span.pr-grey-big-txt last seen
+            %span
+              Saturday afternoon
+          .col-lg-4.right-txt
+            %span.pr-grey-big-txt activity level
+      -# begin activity medal
+            %span.pr-activity
+              %span.pr-activity-medal
+                .pr-activity-medal-round.pr-active-round
+                  %i.fa.fa-star{"aria-hidden": "true"}
+                .pr-activity-medal-bookmark.pr-active-text
+                  %i.fa.fa-bookmark{"aria-hidden": "true"}
+              %span.pr-activity-medal
+                .pr-activity-medal-round
+                  %i.fa.fa-star{"aria-hidden": "true"}
+                .pr-activity-medal-bookmark
+                  %i.fa.fa-bookmark{"aria-hidden": "true"}
+              %span.pr-activity-medal
+                .pr-activity-medal-round
+                  %i.fa.fa-star{"aria-hidden": "true"}
+                .pr-activity-medal-bookmark
+                  %i.fa.fa-bookmark{"aria-hidden": "true"}
+      -# end activity medal
+        %hr
+        .row
+          .col-lg-2.left-txt
+            %span.ion-ios-arrow-left.pr-lr-arrows
+          .col-lg-8.center-txt.pr-howitall
+            How it all started
+          .col-lg-2.right-txt
+            %span.ion-ios-arrow-right.pr-lr-arrows
+        .row
+          .col-lg-12.pr-mix-sentence
+            that's where we have been these 5 months ago
+        .row
+          .col-lg-12
+            .blue-squares
+              .blue-square-one
+                .blue-square-content
+                  %span.pr-blue-square-digit 46
+                  %span.pr-blue-square-text peers
+              .blue-square-one
+                .blue-square-content
+                  %span.pr-blue-square-digit 29
+                  %span.pr-blue-square-text discussions
+              .blue-square-one
+                .blue-square-content
+                  %span.pr-blue-square-digit 19
+                  %span.pr-blue-square-text findings
+              .blue-square-one
+                .blue-square-content
+                  %span.pr-blue-square-digit 10
+                  %span.pr-blue-square-text questions
+        .row
+          .col-lg-12.pr-mix-sentence
+            who joined the platform that same period
+        .row
+          .col-lg-12.pr-joined
+            .pr-sqare-joined-one
+              %span.pr-joined-user-pic
+                %img.pr-joined-user-logo{src: "img/user-pic/m38.jpg", alt: "logo"}
+              %span.pr-joined-user-name
+                Mark
+            .pr-sqare-joined-one
+              %span.pr-joined-user-pic
+                %img.pr-joined-user-logo{src: "img/user-pic/f36.jpg", alt: "logo"}
+              %span.pr-joined-user-name
+                Vanessa
+            .pr-sqare-joined-one
+              %span.pr-joined-user-pic
+                %img.pr-joined-user-logo{src: "img/user-pic/m34.jpg", alt: "logo"}
+              %span.pr-joined-user-name
+                Nick Grek
+        .row
+          .col-lg-12.pr-mix-sentence
+            the hottest disqussion these days
+      .row
+        .col-lg-12
+          .pr-footer
+            %img.pr-footer-picture{src: "img/user-pic/m5.jpg", alt: "logo"}
+            %span.pr-footer-user-name
+              Andrew
+            %span.pr-footer-grey-text
+              found the guardian article
+            %span.pr-footer-topic
+              Vegan diet to stop diabetes progress
+            .row.pr-footer-summary
+              .col-lg-offset-2.col-lg-2
+                .pr-footer-summary-digit 6
+                .pr-footer-summary-text peers involved
+              .col-lg-2
+                .pr-footer-summary-digit 3
+                .pr-footer-summary-text related disqussion
+              .col-lg-2
+                .pr-footer-summary-digit 3
+                .pr-footer-summary-text conversations
+              .col-lg-2
+                .pr-footer-summary-digit 19
+                .pr-footer-summary-text  upvotes
+  -# end profile pop up window
+

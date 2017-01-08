@@ -1,0 +1,47 @@
+!!! 5
+%head{lang: "en"}
+  %meta{charset: "utf-8"}
+  %title Questions
+  %meta{content:"", name: "description"}
+  %meta{content: "", name: "author"}
+  %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
+  %link{rel: "stylesheet", href: "fonts/glyphicons-halflings-regular.svg"}
+  %link{rel: "stylesheet", href: "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"}
+  %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i"}
+  %link{rel: "stylesheet", href: "css/main.css"}
+  %script{src: "js/main.js"}
+%body
+  .wrapper
+    %header
+      .rows
+        .col-lg-2
+          .ion-ios-arrow-left.slideLeft
+        .col-lg-6
+          %span.heading1.uppercase.questhead questions
+          .plus
+            %span.ion-android-add
+          .question-radio-all-my.pull-right
+            %input{type: "radio", name: "all-my-match", checked: "checked", value: "1"} My shelf
+            %input{type: "radio", name: "all-my-match", value: "2"} All questions
+        .col-lg-2
+          .pull-right
+            %span.sortBy Sort by:
+              %label.sortByLabel
+                %i recent
+                %input{type: "radio", name: "sortBy", value: "recent"}
+              or
+              %label.sortByLabel
+                %i hot
+                %input{type: "radio", name: "sortBy", value: "hot"}
+      .rows
+        .col-lg-offset-2.col-lg-6
+          %input.form-control{type: "text", placeholder: "Search questions"}
+        .col-lg-2
+          %input.uppercase.btn.btn-custom{type: "submit", value: "search"}
+    %div.content
+      .row
+        %section.quest-wrap.shadow-right
+          .col-lg-offset-2.col-lg-6
+            .quest-gener question
+          .col-lg-2 some
+
